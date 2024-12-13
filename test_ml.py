@@ -3,7 +3,7 @@ import pytest
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from ml.model import train_model, inference,
+from ml.model import train_model, inference
 from sklearn.model_selection import train_test_split
 
 
@@ -13,7 +13,7 @@ def test_one():
     # Test if the model returens RandomForestClassifer
     """
     X_train = np.random.rand(20,5)
-    y_train = np.random.randint(2, size 20)
+    y_train = np.random.randint(2, size=20)
     model = train_model(X_train, y_train)
     assert isinstance(model, RandomForestClassifier)
     pass
@@ -36,8 +36,8 @@ def test_three():
     # Test if the nodel inference function 
     """
     X_train = np.random.rand(20,5)
-    y_train = np.random.randint(2, size 20)
+    y_train = np.random.randint(2, size=20)
     model = train_model(X_train, y_train)
     y_preds = inference(model, X_train)
-    assert y.shape == y_preds.shape
+    assert y_train.shape == y_preds.shape
     pass
